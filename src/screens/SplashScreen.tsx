@@ -1,10 +1,10 @@
 import React, {useEffect, useRef} from 'react';
-import {Animated, Easing, StyleSheet, Text, View} from 'react-native';
+import {Animated, Easing, Image, StyleSheet, Text, View} from 'react-native';
 import {Backdrop} from '../components/ui';
 import {sfx} from '../core/sound';
 import {C, CANDY, shadow} from '../core/theme';
 
-const TITLE = 'Kids Brain Games';
+const TITLE = 'Brainy Owl';
 
 export default function SplashScreen({onDone}: {onDone: () => void}) {
   const logo = useRef(new Animated.Value(0)).current;
@@ -38,8 +38,7 @@ export default function SplashScreen({onDone}: {onDone: () => void}) {
     <View style={styles.wrap}>
       <Backdrop />
       <Animated.View style={[styles.logo, shadow, {transform: [{scale: logo}, {rotate: rot}]}]}>
-        <Text style={{fontSize: 92}}>🦉</Text>
-        <Text style={styles.cap}>🎓</Text>
+        <Image source={require('../assets/logo.png')} style={styles.logoImg} />
       </Animated.View>
       <View style={styles.titleRow}>
         {TITLE.split(' ').map((word, w) => {
@@ -63,15 +62,15 @@ export default function SplashScreen({onDone}: {onDone: () => void}) {
           );
         })}
       </View>
-      <Animated.Text style={[styles.sub, {opacity: sub}]}>12 brain games · by MPS</Animated.Text>
+      <Animated.Text style={[styles.sub, {opacity: sub}]}>12 kids brain games · by MPS</Animated.Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   wrap: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  logo: {width: 170, height: 170, borderRadius: 52, backgroundColor: C.yellow, alignItems: 'center', justifyContent: 'center', borderWidth: 6, borderColor: C.white},
-  cap: {position: 'absolute', top: -18, right: 6, fontSize: 52, transform: [{rotate: '18deg'}]},
+  logo: {width: 190, height: 190, borderRadius: 52, backgroundColor: C.white, overflow: 'hidden', borderWidth: 6, borderColor: C.white},
+  logoImg: {width: '100%', height: '100%'},
   titleRow: {flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', marginTop: 34, paddingHorizontal: 20, columnGap: 14},
   word: {flexDirection: 'row'},
   letter: {fontSize: 38, fontWeight: '900', textShadowColor: 'rgba(0,0,0,0.12)', textShadowOffset: {width: 0, height: 3}, textShadowRadius: 0},

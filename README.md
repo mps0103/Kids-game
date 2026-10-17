@@ -1,4 +1,4 @@
-# Kids Brain Games by MPS
+# Brainy Owl: Kids Brain Games by MPS
 
 Offline React Native (0.88) Android app. Package: com.mps.kidsbrain
 
