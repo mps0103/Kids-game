@@ -4,8 +4,9 @@ import {BackButton, Backdrop, Bouncy} from '../components/ui';
 import {useProgress} from '../core/progress';
 import {C, shadow} from '../core/theme';
 
-// TODO: publish the privacy policy page and update this link before release.
-export const PRIVACY_URL = 'https://dealtrix.com/kids-brain-games-privacy';
+// Hosted from docs/ via GitHub Pages
+export const PRIVACY_URL = 'https://mps0103.github.io/Kids-game/privacy.html';
+export const TERMS_URL = 'https://mps0103.github.io/Kids-game/terms.html';
 export const SUPPORT_EMAIL = 'info@dealtrix.com';
 
 function Row({icon, label, right, onPress}: {icon: string; label: string; right?: React.ReactNode; onPress?: () => void}) {
@@ -44,6 +45,7 @@ export default function SettingsScreen({onBack}: {onBack: () => void}) {
         <Row icon="🔔" label="Sound effects" right={<Switch value={state.sfx} onValueChange={setSfx} />} />
         <Row icon="📳" label="Vibration" right={<Switch value={state.vibration} onValueChange={setVibration} />} />
         <Row icon="🔒" label="Privacy policy" onPress={() => Linking.openURL(PRIVACY_URL)} right={<Text style={styles.chev}>›</Text>} />
+        <Row icon="📄" label="Terms of use" onPress={() => Linking.openURL(TERMS_URL)} right={<Text style={styles.chev}>›</Text>} />
         <Row icon="✉️" label="Contact us" onPress={() => Linking.openURL(`mailto:${SUPPORT_EMAIL}`)} right={<Text style={styles.chev}>›</Text>} />
         <Row icon="🗑️" label="Reset progress" onPress={reset} right={<Text style={styles.chev}>›</Text>} />
         <View style={[styles.note, shadow]}>
