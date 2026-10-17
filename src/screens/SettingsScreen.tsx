@@ -50,7 +50,7 @@ export default function SettingsScreen({onBack}: {onBack: () => void}) {
         <Row icon="🗑️" label="Reset progress" onPress={reset} right={<Text style={styles.chev}>›</Text>} />
         <View style={[styles.note, shadow]}>
           <Text style={styles.noteText}>
-            Kids Brain Games works fully offline. Ads are child-safe (G-rated, non-personalised) and only appear between levels and on menu screens. Videos for skips and bonus stars are behind a grown-up check.
+            Kids Brain Games works fully offline. Ads are child-safe (G-rated, non-personalised) and only appear between levels and on menu screens. Settings and the skip-level video are behind a grown-up check. The bonus-stars video in the Sticker Book is optional and can be tapped by children.
           </Text>
         </View>
         <Text style={styles.ver}>Kids Brain Games by MPS · v1.0</Text>
