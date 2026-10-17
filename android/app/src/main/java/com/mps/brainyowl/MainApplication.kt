@@ -1,4 +1,4 @@
-package com.mps.kidsbrain
+package com.mps.brainyowl
 
 import android.app.Application
 import com.facebook.react.PackageList

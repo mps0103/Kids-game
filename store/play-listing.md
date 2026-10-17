@@ -53,7 +53,7 @@ Privacy policy: https://mps0103.github.io/Kids-game/privacy.html
 Terms of use: https://mps0103.github.io/Kids-game/terms.html
 
 ## Package name
-com.mps.kidsbrain (keep – cannot be changed after the first upload; users never see it)
+com.mps.brainyowl (permanent after the first upload; users never see it)
 
 ## Category / tags
 Category: Educational (Games → Puzzle also fine)

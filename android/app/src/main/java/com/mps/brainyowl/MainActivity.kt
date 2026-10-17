@@ -1,4 +1,4 @@
-package com.mps.kidsbrain
+package com.mps.brainyowl
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
