@@ -8,15 +8,15 @@ import mobileAds, {
 } from 'react-native-google-mobile-ads';
 
 /**
- * TEST ADS ARE ON. Before release set USE_TEST_ADS = false and put your real
- * ad unit IDs below (and the real App ID in app.json).
+ * Real AdMob ad unit IDs are in PROD below (App ID is in app.json). Set USE_TEST_ADS
+ * = true to show Google test ads while developing; never tap real ads on your own phone.
  */
-export const USE_TEST_ADS = true;
+export const USE_TEST_ADS = false;
 
 const PROD = {
-  banner: 'ca-app-pub-2904788540387890/REPLACE_BANNER',
-  interstitial: 'ca-app-pub-2904788540387890/REPLACE_INTERSTITIAL',
-  rewarded: 'ca-app-pub-2904788540387890/REPLACE_REWARDED',
+  banner: 'ca-app-pub-2904788540387890/5003786256',
+  interstitial: 'ca-app-pub-2904788540387890/1064541249',
+  rewarded: 'ca-app-pub-2904788540387890/7438377908',
 };
 
 export const AD_UNITS = {
